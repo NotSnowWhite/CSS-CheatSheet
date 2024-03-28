@@ -1,0 +1,144 @@
+/* properties that affect the whole html */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+   --purple: rgb(211, 49, 211);
+   --white: white;
+   --black: rgb(65, 65, 65);
+   --turtle: #2aefcb;
+   --universe: rgb(142, 21, 142); 
+}
+
+::selection {
+    background-color: #2aefcb;
+    color: rgb(238, 130, 211) ;
+}
+
+html 
+{
+    
+}
+header{
+    padding: 2%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+header p {
+    margin-top: 3rem;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+h1, h2, h3 {
+    color: var(--purple);
+    text-align: center;
+    line-height: 1.2;
+}
+
+h2 {
+    position: relative;
+    margin-top: 20px;    
+}
+header p {
+    color: var(--white);
+}
+
+p {
+    color: hotpink;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+pre {
+    flex-grow: 1;
+    white-space: pre-wrap;
+    overflow: auto;
+    padding: 1.2rem 1rem;
+    color: var(--white);
+    background-image: linear-gradient(var(--purple)0%, var(--universe)100%);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+code {
+    font-family: monospace;
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 5px 30px;
+}
+
+section {
+    flex: 1 0 80%;
+    padding: 0rem;
+    margin-top: 5rem;
+    margin-bottom: 2.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    min-height: 100% ;
+    padding: 2rem;
+    outline: 2px dashed var(--purple);
+    outline-offset: -2px;
+
+}
+
+figure h2 {
+    /* use position and negative margins to move title of card over the card's outline and create an overlap effect */
+    position: relative;
+    margin: -4rem 0 1.5rem 0;
+    background-color: var(--black);
+    padding: 0.5rem 1rem;
+    border: 2px solid pink;
+    border-radius: 8px;
+}
+
+figure:hover, figure:hover h2{
+    box-shadow: inset 2px 2px 5px var(--purple), 2px 2px 5px var(--purple);
+}
+
+figure pre:active {
+    user-select: all;
+}
+h3{
+    color: var(--white);
+}
+footer {
+    margin: 2rem auto;
+    text-align: center;
+}
+
+/*media queries*/
+@media screen and (min-width: 768px){
+    section {
+        flex: 0 0 48%;
+        max-width: 48%;}
+
+    section:last-child {
+        flex-grow: 1;
+    }
+}
+
+
+@media screen and (min-width: 992px){
+    section {
+        flex: 0 0 30.333%;
+        max-width: 30.333%;  
+    }
+}
